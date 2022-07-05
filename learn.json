@@ -5,7 +5,7 @@
 	"solution": "https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial/blob/main/src/solution.md",
 	"status": "published",
 	"translations": ["us"],
-	"technologies": ["twitter", "http", "api"],
+	"technologies": ["http", "api"],
 	"difficulty": "beginner",
 	"syntax": "python",
 	"duration" : 2,
