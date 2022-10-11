@@ -2,15 +2,16 @@
 
 Twitter can be used as a data source for various data science projects.
 
-In this exercise we will learn how to interact with the Twitter API. We will practice storing tweets in a dataframe and saving them into a csv file.
+In this exercise, we will learn how to interact with the Twitter API. We will practice storing tweets in a dataframe and saving them into a csv file.
 
-Tweepy is a Python library to access the Twitter API. You’ll need to set up a twitter application at dev.twitter.com to obtain a set of authentication keys to use with the API. 
+Tweepy is a Python library to access the Twitter API. You’ll need to set up a Twitter application at dev.twitter.com to obtain a set of authentication keys to use with the API. 
 
-### Step 1: Create a twitter developer account
+### Step 1: Create a Twitter developer account
 
 Create an App in the developer account: https://developer.twitter.com/ . 
 
 Make sure to get the bearer_token, consumer_key, consumer_secret, access_token, access_token_secret and have them in a safe place.
+
 These can be generated in your developer portal, under the “Keys and tokens” tab for your developer App.
 
 Guidance on how to create a Twitter app (step 1 and 2): https://developer.twitter.com/en/docs/tutorials/step-by-step-guide-to-making-your-first-request-to-the-twitter-api-v2
@@ -18,13 +19,13 @@ Guidance on how to create a Twitter app (step 1 and 2): https://developer.twitte
 ### Step 2: Initial setup
 
 - Create an app.py file inside the `./src/` folder. 
-- Install tweepy using PIP.
+- Install Tweepy using PIP.
 
 ### Step 3: Environment variables
 
 You need to provide the Twitter keys and tokens in order to use the API v2.
 
-To do it in a safe way, you should store the secrets in a seperate .env file.
+To do it in a safe way, you should store the secrets in a separate .env file.
 A dotenv file contains only text, where it has one environment variable assignment per line.
 Create a .env file in your project and add your secret keys or passwords: 
 
@@ -74,18 +75,18 @@ To set password or secret keys in environment variable on Linux(and Mac) or Wind
 You can use this link for guidance on how to create the query: https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
 
 
-1. Define query
-2. Get a max. 100 tweets (it's the max allowed by the twitter API)
-```
+1. Define query.
+2. Get a max. 100 tweets (it's the max allowed by the twitter API).
+
 
 ### Step 6: Convert to pandas Dataframe
 
-1. import pandas
-2. Save data as dictionary
-3. Extract "data" value from dictionary
-4. Transform to pandas Dataframe
-5. Take a look at the dataframe to make sure is correct `df.head()`
-6. Save the data as a CSV file named coding-tweets.csv
+1. Import pandas.
+2. Save data as dictionary.
+3. Extract "data" value from dictionary.
+4. Transform to pandas Dataframe.
+5. Take a look at the dataframe to make sure is correct `df.head()`.
+6. Save the data as a CSV file named coding-tweets.csv.
 
 
 ### Step 7: Search for the words
@@ -96,7 +97,7 @@ Now that you have your DataFrame of tweets set up, you're going to do a bit of t
 > You can use the re python library (regular expression operations). See the documentation for guidance: https://docs.python.org/3/library/re.html#
 
 
-1. import de `re` library using `import re`
+1. Import `re` library using `import re`
 2. Define your `word_in_text` function and implement the code.
 
 
@@ -104,7 +105,7 @@ Now that you have your DataFrame of tweets set up, you're going to do a bit of t
 
 Iterate through dataframe rows counting the number of tweets in which pandas and python are mentioned, using your word_in_text() function.
 
-1. Initialize list to store tweet counts
+1. Initialize the list to store tweet counts.
 2. Iterate through df, counting the number of tweets in which each(pandas and python) is mentioned.
 
 ### Step 12: Visualize the data
