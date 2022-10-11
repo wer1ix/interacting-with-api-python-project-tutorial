@@ -97,7 +97,7 @@ Now that you have your DataFrame of tweets set up, you're going to do a bit of t
 > You can use the re python library (regular expression operations). See the documentation for guidance: https://docs.python.org/3/library/re.html#
 
 
-1. Import de `re` library using `import re`
+1. Import `re` library using `import re`
 2. Define your `word_in_text` function and implement the code.
 
 
