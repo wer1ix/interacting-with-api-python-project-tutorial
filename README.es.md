@@ -1,5 +1,5 @@
 <!-- hide -->
-# Integrating with the Twitter API Project Tutorial
+# Tutorial de integración con el proyecto API de Twitter
 <!-- endhide -->
 
 1. Crea una aplicación para desarrolladores de Twitter mediante el Portal para desarrolladores de Twitter. 
