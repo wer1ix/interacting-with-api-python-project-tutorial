@@ -2,7 +2,7 @@
 # Integrating with the Twitter API Project Tutorial
 <!-- endhide -->
 
-1. Crea una aplicación para desarrolladores de Twitter mediante el Portal para desarrolladores de Twitter.
+1. Crea una aplicación para desarrolladores de Twitter mediante el Portal para desarrolladores de Twitter. 
 2. Conéctate con la API de Twitter.
 3. Recupera y descarga datos de la API de Twitter.
 4. Crea un marco de datos de Python Pandas para facilitar la manipulación de los datos.
@@ -20,8 +20,8 @@ La forma más fácil de comenzar a trabajar en este proyecto es usando Gitpod:
 
 ## 🚛 Cómo entregar este proyecto
 
-Una vez que hayas terminado de resolver los ejercicios, asegúrate de confirmar tus cambios, hazle "push" a el fork de tu repositorio y ve a 4Geeks.com para subir el enlace del repositorio.
+Una vez que hayas terminado de resolver los ejercicios, asegúrate de confirmar tus cambios, hazle "push" al fork de tu repositorio y ve a 4Geeks.com para subir el enlace del repositorio.
 
-# Soluciones
+## Soluciones
 
 También incorporamos un archivo `./notebook/*-solution[n].ipynb` que te sugerimos honestamente que solo uses si estás atascado durante más de 30 minutos o si ya has terminado y deseas compararlo con tu enfoque.
