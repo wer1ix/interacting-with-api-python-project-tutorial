@@ -32,7 +32,7 @@ Create a .env file in your project and add your secret keys or passwords:
 ```py
 CONSUMER_KEY="insert your API key"
 CONSUMER_SECRET="insert your API secret"
-ACCEESS_TOKEN="insert your access token"
+ACCESS_TOKEN="insert your access token"
 ACCESS_TOKEN_SECRET="insert your access token secret"
 BEARER_TOKEN="insert your bearer token"
 ```
