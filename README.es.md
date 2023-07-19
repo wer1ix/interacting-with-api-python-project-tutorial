@@ -12,7 +12,7 @@ Dentro de este repositorio, encontrarás un archivo llamado `./INSTRUCTIONS.md` 
 
 ## 🌱  Cómo iniciar este proyecto
 
-La forma más fácil de comenzar a trabajar en este proyecto es usando Gitpod:
+La forma más fácil de comenzar a trabajar en este proyecto es usando Codespace:
 
 1. Haz un fork de [este repositorio](https://github.com/breatheco-de/calculus-and-algebra-problems-with-python) en tu cuenta de github.
 2. Abre el repositorio creado recientemente en Codespace usando la [extensión del botón de Codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
