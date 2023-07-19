@@ -14,8 +14,8 @@ Inside this repository, you will find a file called `./INSTRUCTIONS.md` with the
 The easiest way to start working on this project is by using Gitpod:
 
 1. Make a fork of [this repository](https://github.com/4geeksacademy/interacting-with-the-twitter-api-project-tutorial) into your github account.
-2. Open the recently created fork on Gitpod by using the [Gitpod button extension](https://www.gitpod.io/docs/browser-extension/).
-3. Once Gitpod VSCode has finished opening you can go ahead and open the `problems.ipynb` file and start solving each exercise inside the notebook.
+2. Open the newly created repository in Codespace using the [Codespace button extension](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
+3. Once the Codespace VSCode has finished opening, you can go ahead and open the `problems.ipynb` file and start solving each exercise inside the notebook.
 
 ## 🚛 How to deliver this project
 

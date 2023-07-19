@@ -15,8 +15,8 @@ Dentro de este repositorio, encontrarás un archivo llamado `./INSTRUCTIONS.md` 
 La forma más fácil de comenzar a trabajar en este proyecto es usando Gitpod:
 
 1. Haz un fork de [este repositorio](https://github.com/breatheco-de/calculus-and-algebra-problems-with-python) en tu cuenta de github.
-2. Abre el fork creado recientemente en Gitpod usando la [extensión del botón Gitpod](https://www.gitpod.io/docs/browser-extension/).
-3. Una vez que Gitpod VSCode haya terminado de abrirse, puedes continuar y abrir el archivo `problems.ipynb` para comenzar a resolver cada ejercicio dentro de Notebook.
+2. Abre el repositorio creado recientemente en Codespace usando la [extensión del botón de Codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
+3. Una vez que el VSCode del Codespace haya terminado de abrirse, puedes continuar y abrir el archivo `problems.ipynb` para comenzar a resolver cada ejercicio dentro de Notebook.
 
 ## 🚛 Cómo entregar este proyecto
 
