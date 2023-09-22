@@ -1,5 +1,5 @@
 <!-- hide -->
-# Integrating an API in Python - Step by step guide
+# Interacting an API in Python - Step by step guide
 <!-- endhide -->
 
 1. Create a Spotify developer application using the Spotify Developer Portal.
