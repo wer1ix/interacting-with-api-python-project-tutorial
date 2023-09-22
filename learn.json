@@ -1,8 +1,8 @@
 {
-	"slug" : "interacting-with-the-twitter-api-project-tutorial",
-	"title" : "Integrating with the Twitter API Project Tutorial",
-	"preview": "https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial/blob/main/assets/preview.png?raw=true",
-	"solution": "https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial/blob/main/src/solution.md",
+	"slug" : "interacting-with-api-python-project-tutorial",
+	"title" : "Integrating with an API using Python",
+	"preview": "https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/blob/main/preview.png?raw=true",
+	"solution": "https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/blob/main/src/solution.md",
 	"status": "published",
 	"translations": ["us"],
 	"technologies": ["http", "api"],
@@ -11,5 +11,5 @@
 	"duration" : 2,
     "projectType": "project",
 	"autoPlay": false,
-	"description" : "Connect with the Twitter API, retrieve the data and save it into a python pandas dataframe for easier manipulation and into a SQL database."
+	"description" : "Connect with any API, retrieve the data and save it into a python pandas dataframe for easier manipulation and into a SQL database."
 }
