@@ -7,7 +7,7 @@ The first step is to create an application to be able to access Spotify's API se
 
 Once you have logged in using your Spotify account, you will be able to create the application to access the credentials needed to consume the API. You will need to fill in the following fields:
 
-![Spotify create app](https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial/blob/main/assets/spotify_1.PNG?raw=true)
+![Spotify create app](https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/blob/main/assets/spotify_1.PNG?raw=true)
 
 > NOTE: As we are not going to use this API from any other web application, leave the `Redirect URI` field as `http://localhost/`.
 
@@ -56,7 +56,7 @@ client_secret = os.environ.get("CLIENT_SECRET")
 
 - Start interacting with the Spotify API: Get the top 10 of your favorite artist's songs. To do this, you will have to find the `ID` of the artist to use in the library. This identifier is the web address that the artist has in Spotify:
 
-![Spotify search for artist ID](https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial/blob/main/assets/spotify_2.png?raw=true)
+![Spotify search for artist ID](https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/blob/main/assets/spotify_2.png?raw=true)
 
 - Once you have the API response, keep the `tracks` element, which will contain the most played songs of the artist, keep the name of the song, the popularity and the duration (in minutes).
 
