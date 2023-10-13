@@ -12,7 +12,7 @@
 
 Sigue las siguientes instrucciones:
 
-1. Crear un nuevo repositorio haciendo fork en el [proyecto de Git](https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial) o [haciendo clic aquí](https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial/fork).
+1. Crear un nuevo repositorio haciendo fork en el [proyecto de Git](https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial) o [haciendo clic aquí](https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/fork).
 2. Abre el repositorio creado recientemente en Codespace usando la [extensión del botón de Codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
 3. Una vez que el VSCode del Codespace haya terminado de abrirse, comienza tu proyecto siguiendo las instrucciones a continuación.
 
@@ -24,4 +24,4 @@ Una vez que hayas terminado de resolver el caso práctico, asegúrate de confirm
 
 Lee el contenido del fichero `./INSTRUCTIONS.es.md` que contiene los pasos para completar el proyecto, síguelos y desarrolla la solución primero en `./src/explore.ipynb` para hacer pruebas y después pasa el código limpio a `./src/app.py`. Asegúrate de eliminar el notebook una vez ya no lo necesites para mantener el proyecto limpio y ordenado.
 
-> NOTA: Solución: https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial/blob/main/src/solution.md
+> NOTA: Solución: https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/blob/main/src/solution.md
