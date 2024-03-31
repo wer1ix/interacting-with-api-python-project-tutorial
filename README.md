@@ -2,10 +2,11 @@
 # Interacting with an API in Python - Step by step guide
 <!-- endhide -->
 
-1. Create a Spotify developer application using the Spotify Developer Portal.
-2. Connect with the Spotify API.
-3. Retrieve and download data from the Spotify API.
-4. Create a Python Pandas dataframe for easier manipulation of the data.
++ Create a Spotify developer application using the Spotify Developer Portal.
++ Connect with the Spotify API.
++ Retrieve and download data from the Spotify API.
++ Create a Python Pandas dataframe for easier manipulation of the data.
++ Save the data to an SQL database.
  
 ## 🌱 How to start this project
 
