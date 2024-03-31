@@ -1,6 +1,6 @@
 # Interacting with Spotify's API
 
-Spotify can be used as a data source for various data science projects. In this exercise, we will learn how to interact with the API of this social network. `Spotipy` is an open source and Python library that allows high-level use of the Spotify API.
+Spotify can be used as a data source for various data science projects. In this exercise, we will learn how to interact with the API of this social network. `Spotipy` is an open-source and Python library that allows high-level use of the Spotify API.
 
 ## Step 1: Create a Spotify Developer Account
 
