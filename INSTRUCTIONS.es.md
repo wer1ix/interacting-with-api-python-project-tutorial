@@ -63,7 +63,7 @@ client_secret = os.environ.get("CLIENT_SECRET")
 
 ## Paso 6: Transformar a Pandas DataFrame
 
-Puesto que el resultado obtenido en estos pasos es suceptible de tener formato de tabla, conviértelo en un DataFrame importando los datos en su formato de diccionario. A continuación, ordena las canciones por popularidad creciente y muestra el top 3 resultante.
+Puesto que el resultado obtenido en estos pasos es susceptible de tener formato de tabla, conviértelo en un DataFrame importando los datos en su formato de diccionario. A continuación, ordena las canciones por popularidad creciente y muestra el top 3 resultante.
 
 ## Paso 7: Analizar relación estadística
 
