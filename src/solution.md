@@ -1,8 +1,8 @@
-## Interacting with the Spotify API
+# Interacting with the Spotify API
 
-Spotify can be used as a data source for various data science projects. In this exercise, we will learn how to interact with the API of this social network. Spotipy is an open source Python library that allows high-level use of the Spotify API.
+Spotify can be used as a data source for various data science projects. In this exercise, we will learn how to interact with the API of this social network. `Spotipy` is an open-source Python library that allows high-level use of the Spotify API.
 
-### Step 1
+## Step 1: Create a Spotify Developer Account
 
 The first step is to create an application to be able to access Spotify API services. All the information can be found [here](https://developer.spotify.com/documentation/web-api).
 
@@ -10,13 +10,13 @@ Once you have logged in using your Spotify account, you can create the applicati
 
 ![Spotify create app](https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial/blob/main/assets/spotify_1.PNG?raw=true)
 
-> NOTE: As we are not going to use this API from any other web application, leave the `Redirect URI` field as `http://localhost/`.
+> NOTE: As we are not going to use this API from any other web application, leave the **Redirect URI** field as `http://localhost/`.
 
-Once you complete the form, you will have your application created. Next, in the `settings` section you can find your `Client ID` and `Client Secret`.
+Once you complete the form, you will have your application created. Next, in the **settings** section you can find your `Client ID` and `Client Secret`.
 
-### Step 2
+## Step 2: Initial configuration
 
-- Create a file `app.py` inside `src` folder.
+- Create an `app.py` file inside the `./src/` folder.
 - Install all the requirements from the `requirements.txt` file or just the required library.
 
 ```python
@@ -39,17 +39,17 @@ Once you complete the form, you will have your application created. Next, in the
     Installing collected packages: async-timeout, redis, spotipy
     Successfully installed async-timeout-4.0.2 redis-4.6.0 spotipy-2.23.0
 
-### Step 3
+## Step 3: Environment variables
 
 - Create a file `.env` on the root folder of the project.
-- Insert both the `client ID` and `client secret` in the file, for example:
+- Insert both the `CLIENT_ID` and `CLIENT_SECRET` in the file, for example:
 
-```
+```py
 CLIENT_ID="AAAAAAAAAAAABBBBBBBBBBBBCCCCCCCCCCCCC111111222222"
 CLIENT_SECRET="DDDDDDDDDDDDDEEEEEEEEEEEEEEEEFFFFFFFFFFFFFF333333344444"
 ```
 
-- Now we can insert this information in our Python program to start working with it
+- Now we can insert this information into our Python program to start working with it
 
 ```py
 import os
@@ -60,7 +60,7 @@ client_id = os.environ.get('CLIENT_ID')
 client_secret = os.environ.get('CLIENT_SECRET')
 ```
 
-### Step 4
+## Step 4: Initialize Spotipy library
 
 After downloading the library and loading the environment variables, we can start working by initiating the API connection:
 
@@ -74,9 +74,9 @@ con = spotipy.Spotify(auth_manager = SpotifyClientCredentials(client_id = client
 
 Now we can work and interact with the API to perform the queries we want to perform.
 
-### Step 5
+## Step 5: Make API requests
 
-In this case I have chosen Drake. First I get his ID by searching for his Spotify page and getting it from the URI. Now, I perform the search for his top 10 songs.
+In this case, I have chosen Drake. First, I get his ID by searching for his Spotify page and getting it from the URI. Now, I perform the search for his top 10 songs.
 
 ```py
 artist_id = "3TVXtAsR1Inumwj472S9r4"
@@ -89,7 +89,7 @@ if response:
   tracks = [{k: (v/(1000*60))%60 if k == "duration_ms" else v for k, v in track.items() if k in ["name", "popularity", "duration_ms"]} for track in tracks]
 ```
 
-### Step 6
+## Step 6: Transform to Pandas DataFrame
 
 Once we have modified the answer, we create the Pandas DataFrame from it:
 
@@ -102,7 +102,7 @@ tracks_df.sort_values(["popularity"], inplace = True)
 print(tracks_df.head(3))
 ```
 
-### Step 7
+## Step 7: Analyze statistical relationship
 
 A scatter plot is a good alternative to determine visually and graphically whether two variables may or may not be related to each other:
 
@@ -114,6 +114,6 @@ fig = scatter_plot.get_figure()
 fig.savefig("scatter_plot.png")
 ```
 
-![Scatter Plot](https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial/blob/main/assets/scatter_plot.png?raw=true)
+![Scatter plot of popularity and duration of songs](https://github.com/4GeeksAcademy/interacting-with-the-twitter-api-project-tutorial/blob/main/assets/scatter_plot.png?raw=true)
 
 As can be seen, there is no direct relationship between the length of the song and its popularity.
