@@ -4,54 +4,70 @@ Spotify se puede utilizar como fuente de datos para varios proyectos de ciencia 
 
 ## Paso 1: Crear una cuenta de desarrollador de Spotify
 
-El primer paso es crear una aplicación para poder acceder a los servicios API de Spotify. Toda la información la puedes encontrar [aquí](https://developer.spotify.com/documentation/web-api).
+Antes de comenzar a programar, necesitas acceso a las credenciales de desarrollador de Spotify. Visita [developer.spotify.com](https://developer.spotify.com/documentation/web-api).
 
-Una vez te hayas logueado usando tu cuenta de Spotify, podrás crear la aplicación para acceder a las credenciales necesarias para consumir la API. Deberás rellenar los siguientes campos:
+- Inicia sesión con tu cuenta de Spotify (o crea una si aún no tienes una).
+
+- Ve a Dashboard y haz clic en Create an App. Completa los campos requeridos. En Redirect URI, escribe: `http://localhost/`
+
 
 ![Spotify create app](https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/blob/main/assets/spotify_1.PNG?raw=true)
 
-> NOTA: Como no vamos a utilizar esta API desde ninguna otra aplicación web, deja el campo de **Redirect URI** como `http://localhost/`.
 
-Una vez completes el formulario, ya tendrás tu aplicación creada. A continuación, en el apartado de **settings** podrás encontrar tu `Client ID` y `Client Secret`.
+Una vez creada la app, dirígete a la sección **Settings** para copiar tu `Client ID` y `Client Secret`. Los usarás más adelante para autenticarte ante la API.
 
 ## Paso 2: Configuración inicial
 
-- Crear un archivo `app.py` dentro de la carpeta `./src/`.
-- Asegúrate de tener instalada la librería de Python que vamos a utilizar, y si no, instálala: `pip install spotipy`.
+- Abre la terminal y asegúrate de tener instalada la librería `Spotipy`, que es la que usaremos para conectarnos con la API de Spotify:
+
+    ```bash
+    pip install spotipy
+    ```
 
 ## Paso 3: Variables de entorno
 
-Debes proporcionar la clave y el token de Spotify para poder utilizar la API y acceder a sus funcionalidades. Como vimos en el proyecto anterior, esto puedes hacerlo fácilmente creando un fichero `.env` en el directorio raíz del proyecto.
+Ya tienes el archivo `.env` en la raíz del proyecto. Asegúrate de que contenga las siguientes variables con tus credenciales de Spotify (reemplaza el contenido con tus propios datos):
 
-El tercer paso es crear un archivo `.env` en tu proyecto y agrega tus claves secretas o contraseñas:
-
-```py
-CLIENT_ID="insert your client key"
-CLIENT_SECRET="insert your client secret"
+```env
+CLIENT_ID=your_client_id
+CLIENT_SECRET=your_client_secret
 ```
 
-> NOTA: Asegúrate de agregar el `.env` dentro de tu archivo `.gitignore`, el cual no queremos guardar en el control de fuente, para que no estés poniendo en riesgo información potencialmente confidencial.
+> ⚠️ Es importante que coloques tus datos en las variables de entorno para evitar exponer tus credenciales si subes el proyecto a un repositorio.
 
-Ahora, debes instalar `python-dotenvpackage`. Este es un paquete de Python que permite que tu aplicación de Python lea un archivo `.env`. Este paquete buscará un `.env` y, si lo encuentra, expondrá las variables que contiene a la aplicación.
+Ahora, en el archivo `app.py`, agrega el siguiente código para leer las variables de entorno:
 
-Ejemplo:
-
-```py
+```python
+import os
+import pandas as pd
+import seaborn as sns
 from dotenv import load_dotenv
+
+# load the .env file variables
 load_dotenv()
 
-import os
-
+# Get credential values
 client_id = os.environ.get("CLIENT_ID")
 client_secret = os.environ.get("CLIENT_SECRET")
 ```
+
+Con esto, tus credenciales estarán listas para ser utilizadas en la autenticación con la API de Spotify.
+
 
 ## Paso 4: Inicializar la biblioteca Spotipy
 
 - Importar Spotipy.
 - Realizar la conexión con la API. Para ello, puedes utilizar la función `spotipy.Spotify()`.
 
-> NOTA: Utiliza la siguiente documentación como guía sobre los parámetros: https://spotipy.readthedocs.io/en/2.22.1
+```python
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
+
+auth_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
+spotify = spotipy.Spotify(auth_manager=auth_manager)
+```
+
+> 💡 NOTA: Utiliza la siguiente documentación como guía sobre los parámetros: https://spotipy.readthedocs.io/en/2.22.1
 
 ## Paso 5: Realizar solicitudes a la API
 
@@ -60,6 +76,16 @@ client_secret = os.environ.get("CLIENT_SECRET")
 ![Buscar el identificador del artista en Spotify](https://github.com/4GeeksAcademy/interacting-with-api-python-project-tutorial/blob/main/assets/spotify_2.png?raw=true)
 
 - Una vez tengas la respuesta de la API, quédate con el elemento `tracks`, que contendrá las canciones con más reproducciones del artista, quédate con el nombre de la canción, la popularidad y la duración (en minutos).
+
+> ⚠️ **NOTA** sobre posibles mensajes al ejecutar el código. Es posible que al finalizar la ejecución del script aparezca un mensaje como:
+
+```
+ Exception ignored in: <function Spotify.__del__ ...>
+ TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+```
+
+Este mensaje proviene de la librería `spotipy` y **no afecta la funcionalidad de tu código ni los resultados de la API**. Puedes ignorarlo de forma segura; se trata de un detalle interno de limpieza de objetos (**garbage collection**) que no interrumpe tu análisis.
+
 
 ## Paso 6: Transformar a Pandas DataFrame
 
