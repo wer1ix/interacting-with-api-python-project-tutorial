@@ -94,3 +94,50 @@ Puesto que el resultado obtenido en estos pasos es susceptible de tener formato 
 ## Paso 7: Analizar relación estadística
 
 ¿Tiene relación la duración con la popularidad? ¿Podríamos decir que una canción que dure poco tiempo puede ser más popular que otra que dure más? Analízalo graficando un `scatter plot` y argumenta tu respuesta.
+
+
+## ¿Te sientes con ganas de profundizar? 😎  
+**Exploración avanzada de atributos musicales - Análisis extendido con enfoque interpretativo**
+
+Si ya lograste conectarte a la API de Spotify, extraer información de tu artista favorito y representar datos básicos como popularidad y duración, te invitamos a realizar esta versión extendida del proyecto. Esta actividad opcional te permitirá incorporar nuevas variables musicales, aplicar pensamiento analítico y redactar conclusiones claras y bien fundamentadas a partir de los datos.
+
+---
+
+### Propuesta 🚀  
+Aprovecha que ya tienes acceso a los datos del artista para profundizar en el análisis incluyendo nuevas métricas que ofrece la API. El objetivo es detectar patrones o características interesantes y expresarlas en un lenguaje comprensible para cualquier lector.
+
+#### Variables recomendadas para explorar:
+
+- **Danceability**: Qué tan fácil es bailar la canción.
+- **Valence**: Qué tan positiva o feliz suena.
+- **Energy**: Intensidad o fuerza general.
+- **Tempo**: Velocidad (en BPM).
+
+---
+
+1. **Recupera los atributos adicionales:** Utiliza el método `audio_features()` para obtener los atributos musicales de las canciones de tu artista:
+
+    ```python
+    track_ids = [track["id"] for track in results["tracks"]]
+    features = sp.audio_features(track_ids)
+    ```
+
+2. **Crea un nuevo DataFrame con la información completa:** Combina los datos obtenidos anteriormente (`nombre, popularidad, duración`) con las nuevas métricas.
+
+3. **Realiza un análisis sencillo:** Explora los valores promedio, busca extremos, identifica correlaciones visuales o estadísticamente.
+
+    - ¿Qué valores destacan en este artista?
+
+    - ¿Existe alguna tendencia entre popularidad y otro atributo?
+
+    - ¿Hay algo que no esperabas encontrar?
+
+    Crea una gráfica sencilla que complemente tu conclusión.
+
+4. **Haz visible tu trabajo:** Con base en el análisis, redacta una o dos frases que sinteticen lo que descubriste y publicalo en LinkedIn. El objetivo es comunicar tu hallazgo de forma objetiva, breve y con respaldo en los datos.
+
+    > **Ejemplo:**
+    >
+    > "Las canciones más populares del artista analizado tienen un nivel de “danceability” promedio de > 0.82, lo que sugiere una clara orientación hacia lo bailable. 🕺💃 #SpotifySecrets"
+
+

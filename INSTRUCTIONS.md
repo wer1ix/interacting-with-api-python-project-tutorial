@@ -90,3 +90,48 @@ Since the result obtained in these steps is likely to be in table format, conver
 ## Step 7: Analyze statistical relationship
 
 Does duration have a relationship with popularity? Could we say that a song that lasts a short time may be more popular than a song that lasts longer? Analyze it by plotting a `scatter plot` and argue your answer.
+
+
+## Feeling like diving deeper? 😎  
+**Advanced Exploration of Musical Attributes - Extended Analysis with Interpretative Focus**
+
+If you've already managed to connect to the Spotify API, extract information about your favorite artist, and represent basic data like popularity and duration, we invite you to take on this extended version of the project. This optional activity will allow you to incorporate new musical variables, apply analytical thinking, and write clear and well-supported conclusions based on the data.
+
+---
+
+### Proposal 🚀  
+Take advantage of your access to the artist's data to deepen the analysis by including new metrics offered by the API. The goal is to detect interesting patterns or characteristics and express them in a way that is understandable to any reader.
+
+#### Recommended variables to explore:
+
+- **Danceability**: How easy it is to dance to the song.
+- **Valence**: How positive or happy it sounds.
+- **Energy**: Overall intensity or strength.
+- **Tempo**: Speed (in BPM).
+
+---
+
+1. **Retrieve additional attributes:** Use the `audio_features()` method to obtain the musical attributes of the artist's songs:
+
+    ```python
+    track_ids = [track["id"] for track in results["tracks"]]
+    features = sp.audio_features(track_ids)
+    ```
+
+2. **Create a new DataFrame with complete information:** Combine the previously obtained data (`name, popularity, duration`) with the new metrics.
+
+3. **Perform a simple analysis:** Explore average values, look for extremes, identify visual or statistical correlations.
+
+    - What values stand out for this artist?
+
+    - Is there any trend between popularity and another attribute?
+
+    - Is there something unexpected you found?
+
+    Create a simple chart to complement your conclusion.
+
+4. **Make your work visible:** Based on the analysis, write one or two sentences summarizing what you discovered and post it on LinkedIn. The goal is to communicate your findings objectively, briefly, and with data-backed evidence.
+
+    > **Example:**
+    >
+    > "The most popular songs of the analyzed artist have an average “danceability” level of > 0.82, suggesting a clear focus on danceable tracks. 🕺💃 #SpotifySecrets"
